@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+  }
+
+  form {
+    background-color: rgb(15, 95, 175);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input, button, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+</style>
+</head>
+<body>
+  <form>
+    <h2>Student Form</h2>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your email" required />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Your password" required />
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required />
+
+    <label>Gender</label>
+    <div class="radio-group">
+      <label><input type="radio" name="gender" value="male" required /> Male</label>
+      <label><input type="radio" name="gender" value="female" required /> Female</label>
+      <label><input type="radio" name="gender" value="other" required /> Other</label>
+    </div>
+
+    <label for="hobbies">Hobbies</label>
+    <label><input type="checkbox" name="hobbies" value="reading" /> Reading</label>
+    <label><input type="checkbox" name="hobbies" value="sports" /> Sports</label>
+    <label><input type="checkbox" name="hobbies" value="music" /> Music</label>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Write your message here..." rows="4" required></textarea>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
